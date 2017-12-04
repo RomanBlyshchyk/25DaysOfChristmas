@@ -10,6 +10,7 @@ namespace Day2_CorruptionChecksum
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }
