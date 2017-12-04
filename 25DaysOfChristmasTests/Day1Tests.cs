@@ -19,7 +19,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
-            var x = Program.InverseCapcha(input);
+            var x = Day1.InverseCapcha(input);
             Assert.AreEqual(result, x);
         }
 
@@ -31,7 +31,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaRoundTest(string input, int result)
         {
-            var x = Program.InverseCapchaRound(input);
+            var x = Day1.InverseCapchaRound(input);
             Assert.AreEqual(result, x);
         }
     }

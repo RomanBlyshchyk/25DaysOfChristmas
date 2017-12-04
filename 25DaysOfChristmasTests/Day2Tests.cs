@@ -10,6 +10,7 @@ namespace _25DaysOfChristmasTests
     {
 
         [TestCase("", 0)]
+        [TestCase("1 2 3 \n 4 5 6 \n 7\t8 9", 6)]
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
