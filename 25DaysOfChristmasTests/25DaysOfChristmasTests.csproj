@@ -50,15 +50,12 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
     <Compile Include="Day1Tests.cs" />
     <Compile Include="Day2Tests.cs" />
+    <Compile Include="Day3Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +66,10 @@
     <ProjectReference Include="..\Day2_CorruptionChecksum\Day2_CorruptionChecksum.csproj">
       <Project>{c87947db-d915-4728-8491-51db9254d004}</Project>
       <Name>Day2_CorruptionChecksum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day3_SpiralMemory\Day3_SpiralMemory.csproj">
+      <Project>{aefba267-2356-4191-8eab-a025b277844d}</Project>
+      <Name>Day3_SpiralMemory</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
