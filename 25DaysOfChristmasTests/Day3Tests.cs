@@ -12,7 +12,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void TestMethod1(int result)
         {
-            var x = Day3.SomeMethod();
+            var x = Day3.SomeMethod();//test
             Assert.AreEqual(x, result);
         }
     }
