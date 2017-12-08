@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1_InverseCaptcha", "Day1_InverseCaptcha\Day1_InverseCaptcha.csproj", "{ED48D248-9143-4439-B163-BE51B163F0BB}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25DaysOfChristmasTests", "25DaysOfChristmasTests\25DaysOfChristmasTests.csproj", "{09019FAC-3B7B-48E9-BEA9-D37824CBBB0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3_SpiralMemory", "Day3_SpiralMemory\Day3_SpiralMemory.csproj", "{AEFBA267-2356-4191-8EAB-A025B277844D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8_Registers", "Day8_Registers\Day8_Registers.csproj", "{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AEFBA267-2356-4191-8EAB-A025B277844D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEFBA267-2356-4191-8EAB-A025B277844D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEFBA267-2356-4191-8EAB-A025B277844D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
