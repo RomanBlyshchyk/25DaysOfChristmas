@@ -84,6 +84,10 @@
       <Project>{f545afb0-1a93-4eb2-9159-99e3f9dba923}</Project>
       <Name>Day5_Trampolines</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Day6_Memory\Day6_Memory.csproj">
+      <Project>{9cb4229b-2601-4cb9-8a1b-fdc9b3802936}</Project>
+      <Name>Day6_Memory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Day8_Registers\Day8_Registers.csproj">
       <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
       <Name>Day8_Registers</Name>

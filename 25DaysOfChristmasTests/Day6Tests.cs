@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Day8_Registers;
+using Day6_Memory;
 
 namespace _25DaysOfChristmasTests
 {
