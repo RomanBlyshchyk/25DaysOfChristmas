@@ -80,6 +80,10 @@
       <Project>{6bdf4394-6782-4cf5-866f-0cbf68427d98}</Project>
       <Name>Day4_Passphrases</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Day5_Trampolines\Day5_Trampolines.csproj">
+      <Project>{f545afb0-1a93-4eb2-9159-99e3f9dba923}</Project>
+      <Name>Day5_Trampolines</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Day8_Registers\Day8_Registers.csproj">
       <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
       <Name>Day8_Registers</Name>
