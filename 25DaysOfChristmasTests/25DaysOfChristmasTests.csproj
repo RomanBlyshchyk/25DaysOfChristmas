@@ -56,6 +56,10 @@
     <Compile Include="Day1Tests.cs" />
     <Compile Include="Day2Tests.cs" />
     <Compile Include="Day3Tests.cs" />
+    <Compile Include="Day4Tests.cs" />
+    <Compile Include="Day5Tests.cs" />
+    <Compile Include="Day6Tests.cs" />
+    <Compile Include="Day7Tests.cs" />
     <Compile Include="Day8Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +75,10 @@
     <ProjectReference Include="..\Day3_SpiralMemory\Day3_SpiralMemory.csproj">
       <Project>{aefba267-2356-4191-8eab-a025b277844d}</Project>
       <Name>Day3_SpiralMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day4_Passphrases\Day4_Passphrases.csproj">
+      <Project>{6bdf4394-6782-4cf5-866f-0cbf68427d98}</Project>
+      <Name>Day4_Passphrases</Name>
     </ProjectReference>
     <ProjectReference Include="..\Day8_Registers\Day8_Registers.csproj">
       <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>

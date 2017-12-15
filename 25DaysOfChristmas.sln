@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3_SpiralMemory", "Day3_S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8_Registers", "Day8_Registers\Day8_Registers.csproj", "{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4_Passphrases", "Day4_Passphrases\Day4_Passphrases.csproj", "{6BDF4394-6782-4CF5-866F-0CBF68427D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDF4394-6782-4CF5-866F-0CBF68427D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDF4394-6782-4CF5-866F-0CBF68427D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDF4394-6782-4CF5-866F-0CBF68427D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDF4394-6782-4CF5-866F-0CBF68427D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
