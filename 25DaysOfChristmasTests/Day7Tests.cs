@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Day8_Registers;
+using Day7_Circus;
 
 namespace _25DaysOfChristmasTests
 {
@@ -12,10 +12,12 @@ namespace _25DaysOfChristmasTests
     class Day7Tests
     {
 
+        [TestCase("","")]
         [Test]
-        public void Day7TestMethod()
+        public void FindRootTest(string input, string result)
         {
-
+            var root = Day7.FindRoot(input);
+            Assert.AreEqual(result, root);
         }
     }
 }
