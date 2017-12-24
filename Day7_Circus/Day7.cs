@@ -11,9 +11,11 @@ namespace Day7_Circus
     {
         static void Main(string[] args)
         {
-            using (var sr = new StreamReader("C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day7_Circus\\input.txt"))
+            // C:\Users\Roman\Source\Repos\25DaysOfChristmas\Day7_Circus\input_test.txt
+            // C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day7_Circus\\input.txt
+            using (var sr = new StreamReader("C:\\Users\\Roman\\Source\\Repos\\25DaysOfChristmas\\Day7_Circus\\input_test.txt"))
             {
-                Console.WriteLine(FindRoot(sr.ReadToEnd()));
+                Console.WriteLine(FindCorrectWeight(sr.ReadToEnd()));
                 Console.ReadKey();
             }
         }
@@ -36,9 +38,39 @@ namespace Day7_Circus
             var correctWeight = 0;
 
             var parent = nodes.Find(n => string.IsNullOrEmpty(n.Parent));
-            
+
+            correctWeight = FixWeight(parent);
 
             return correctWeight;
+        }
+
+        private static int FixWeight(Program parent)
+        {
+            var weight = 0;
+            if(parent.Children.Count == 0)
+            {
+                // this is a child node, return its weight
+                weight = parent.Weight;
+            }
+            else
+            {
+                // we have children nodes. Find their weight and calculate the parent weight
+                var childrenWeight = 0;
+                foreach (var child in parent.Children)
+                    childrenWeight += FixWeight(child);
+
+                if(childrenWeight % parent.Children.Count != 0)
+                {
+                    Console.WriteLine("Found the offset:");
+                    Console.WriteLine(childrenWeight % parent.Children.Count);  //the offset will be the result of the mod function 
+                    // RB: how can we find an odd child that needs fixing? 
+                }
+                else
+                {
+                    weight = parent.Weight + childrenWeight;
+                }
+            }
+            return weight;
         }
 
         private static List<Program> GatherNodes(string input)
@@ -82,7 +114,7 @@ namespace Day7_Circus
                 {
                     var kid = nodes.Find(n => n.Name == child);
                     kid.Parent = node.Name;
-                    node.Children.Add(new Program(kid.Name, kid.Weight));
+                    node.Children.Add(kid);
                 }
             }
 
