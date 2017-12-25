@@ -13,7 +13,7 @@ namespace Day9
         {
             using (var sr = new StreamReader("C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day9\\input.txt"))
             {
-                Console.WriteLine(FindTotalGroupScore(sr.ReadToEnd()));
+                Console.WriteLine(CountCancelledCharacters(sr.ReadToEnd()));
                 Console.ReadKey();
             }
         }
@@ -65,6 +65,84 @@ namespace Day9
             }
 
             return totalScore;
+        }
+
+        public static int CountCancelledCharacters(string input)
+        {
+            var isGarbageOpen = false;
+            var isIgnoreNext = false;
+            var totalCount = 0;
+            foreach (var piece in input.ToCharArray())
+            {
+                if (isIgnoreNext)
+                {
+                    isIgnoreNext = false;
+                    continue;
+                }
+                if (piece == '!' && !isIgnoreNext)
+                {
+                    isIgnoreNext = true;
+                    continue;
+                }
+
+
+                if (isGarbageOpen)
+                {
+                    if(piece == '>')
+                    {
+                        isGarbageOpen = false;
+                    }
+                    else
+                    {
+                        totalCount++;
+                    }
+                }
+                else if(piece == '<')
+                {
+                    isGarbageOpen = true;
+                }
+
+                #region old
+                //if (isIgnoreNext)
+                //{
+                //    isIgnoreNext = false;
+                //    continue;
+                //}
+                //if (piece == '!' && !isIgnoreNext)
+                //{
+                //    isIgnoreNext = true;
+                //}
+
+                //if (isGarbageOpen)
+                //{
+                //    if (piece == '>')
+                //        isGarbageOpen = false;
+
+                //    continue;
+                //}
+
+
+
+                //if (piece == '<' && !isGarbageOpen)
+                //{
+                //    // garbage starts
+                //    isGarbageOpen = true;
+                //}
+                //else if (piece == '{')
+                //{
+                //    // new group starts
+                //    groupLevel++;
+                //    totalCount += groupLevel;
+                //}
+                //else if (piece == '}')
+                //{
+                //    // close group
+                //    groupLevel--;
+                //} 
+                #endregion
+            }
+
+            return totalCount;
         }
     }
 
