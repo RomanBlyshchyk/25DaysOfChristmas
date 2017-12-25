@@ -93,7 +93,7 @@ namespace Day8_Registers
                 {
                     Console.WriteLine($"Encountered an unknown condition operator: {condition} in line: {line}");
                 }
-
+                // test
                 if(conditionResult)
                 {
                     var register = registers.Find(r => r.Name == regName);
