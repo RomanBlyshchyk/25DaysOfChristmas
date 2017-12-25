@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,60 @@ namespace Day9
     {
         static void Main(string[] args)
         {
+            using (var sr = new StreamReader("C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day9\\input.txt"))
+            {
+                Console.WriteLine(FindTotalGroupScore(sr.ReadToEnd()));
+                Console.ReadKey();
+            }
+        }
+
+        public static int FindTotalGroupScore(string input)
+        {
+            var isGarbageOpen = false;
+            var isIgnoreNext = false;
+            var groupLevel = 0;
+            var totalScore = 0;
+            foreach (var piece in input.ToCharArray())
+            {
+                if (isIgnoreNext)
+                {
+                    isIgnoreNext = false;
+                    continue;
+                }
+                if (piece == '!' && !isIgnoreNext)
+                {
+                    isIgnoreNext = true;
+                }
+
+                if (isGarbageOpen)
+                {
+                    if (piece == '>')
+                        isGarbageOpen = false;
+
+                    continue;
+                }
+
+
+
+                if (piece == '<' && !isGarbageOpen)
+                {
+                    // garbage starts
+                    isGarbageOpen = true;
+                }
+                else if (piece == '{')
+                {
+                    // new group starts
+                    groupLevel++;
+                    totalScore += groupLevel;
+                }
+                else if (piece == '}')
+                {
+                    // close group
+                    groupLevel--;
+                }
+            }
+
+            return totalScore;
         }
     }
 
