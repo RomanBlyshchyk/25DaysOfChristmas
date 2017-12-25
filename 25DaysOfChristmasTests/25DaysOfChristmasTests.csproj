@@ -60,10 +60,23 @@
     <Compile Include="Day5Tests.cs" />
     <Compile Include="Day6Tests.cs" />
     <Compile Include="Day7Tests.cs" />
+    <Compile Include="Day9Tests.cs" />
     <Compile Include="Day8Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dady10\Day10.csproj">
+      <Project>{fd397c63-64e8-47ff-9829-9e62ae6486c1}</Project>
+      <Name>Day10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day11\Day11.csproj">
+      <Project>{e93f7a01-aecd-4525-be03-cd625fb7fbc6}</Project>
+      <Name>Day11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day12\Day12.csproj">
+      <Project>{7af97384-d9ef-4499-9663-84deef3b93dc}</Project>
+      <Name>Day12</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Day1_InverseCaptcha\Day1_InverseCaptcha.csproj">
       <Project>{ed48d248-9143-4439-b163-be51b163f0bb}</Project>
       <Name>Day1_InverseCaptcha</Name>
@@ -95,6 +108,10 @@
     <ProjectReference Include="..\Day8_Registers\Day8_Registers.csproj">
       <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
       <Name>Day8_Registers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day9\Day9.csproj">
+      <Project>{040c3cc1-4ebe-46f2-9063-5e631123afeb}</Project>
+      <Name>Day9</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
