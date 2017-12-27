@@ -28,7 +28,7 @@ namespace Day10
             //Console.WriteLine(KnotHashRound(input)); 
             #endregion
 
-            var stringInput = "1,2,3";
+            var stringInput = "187,254,0,81,169,219,1,190,19,102,255,56,46,32,2,216";
             var input = new List<int>();
             foreach (var item in stringInput.ToCharArray())
             {
@@ -36,6 +36,7 @@ namespace Day10
             }
             input.AddRange(new List<int>() { 17, 31, 73, 47, 23 });
             Console.WriteLine(KnotHash(input));
+            Console.ReadKey();
 
         }
 
@@ -56,9 +57,9 @@ namespace Day10
                 var denseValue = 0;
                 foreach (var item in subset)
                 {
-                    denseValue = denseValue | item;
-                    denseHash.Add(denseValue);
+                    denseValue = denseValue ^ item;
                 }
+                denseHash.Add(denseValue);
             }
 
             // convert each number into hex value and combine into 32 hex digit value
@@ -66,10 +67,17 @@ namespace Day10
             foreach (var item in denseHash)
             {
                 // convert item to hex....somehow
-                hexValue += "";
+                var hex = item.ToString("X");
+                if(hex.Length == 1)
+                {
+                    var leadingZero = "0";
+                    var sum = leadingZero + hex;
+                    hex = sum;
+                }
+                hexValue += hex;
             }
 
-            return hexValue;
+            return hexValue.ToLower();    //3efbe78a8d82f29979031a4aa0b16a9d
         }
 
         private static void KnotHashRound(List<int> input, List<int> list)
