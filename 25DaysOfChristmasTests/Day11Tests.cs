@@ -33,5 +33,17 @@ namespace _25DaysOfChristmasTests
             var totalScore = Day11.Day11.FindShortestDistance(input);
             Assert.AreEqual(result, totalScore);
         }
+
+        [TestCase("", 0)]
+        [TestCase("n", 1)]
+        [TestCase("n,n,n", 3)]
+        [TestCase("n,s,n,s", 1)]
+        [TestCase("n,n,n,n,s,s,s,s", 4)]
+        [Test]
+        public void FindFurthestShortestDistanceTest(string input, int result)
+        {
+            var totalScore = Day11.Day11.FindFurthestShortestDistance(input);
+            Assert.AreEqual(result, totalScore);
+        }
     }
 }
