@@ -20,10 +20,9 @@ namespace Day11
 
         public static int FindShortestDistance(string input)
         {
-            var north = 0;
-            var south = 0;
-            var east = 0;
-            var west = 0;
+            var x = 0;
+            var y = 0;
+            var z = 0;
 
             var steps = input.Split(',');
 
@@ -32,146 +31,36 @@ namespace Day11
                 switch (step)
                 {
                     case "n":
-                        if (south != 0 && (east != 0 || west != 0))
-                        {
-                            south--;
-                        }
-                        else if (south != 0)
-                        {
-                            south--;
-                        }
-                        else
-                        {
-                            north++;
-                        }
+                        y += 1;
+                        z -= 1;
                         break;
                     case "ne":
-
-                        if (south != 0 && west != 0)
-                        {
-                            south--;
-                            west--;
-                        }
-                        else if (west != 0 && north != 0)
-                        {
-                            west--;
-                        }
-                        else if (west != 0)
-                        {
-                            north++;
-                            west--;
-                        }
-                        else if (south != 0)
-                        {
-                            south--;
-                            east++;
-                        }
-                        else
-                        {
-                            north++;
-                            east++;
-                        }
-
+                        x += 1;
+                        z -= 1;
                         break;
                     case "nw":
-                        if (south != 0 && east != 0)
-                        {
-                            south--;
-                            east--;
-                        }
-                        else if (north != 0 && east != 0)
-                        {
-                            east--;
-                        }
-                        else if (east != 0)
-                        {
-                            north++;
-                            east--;
-                        }
-                        else if (south != 0)
-                        {
-                            south--;
-                            west++;
-                        }
-                        else
-                        {
-                            north++;
-                            west++;
-                        }
+                        x -= 1;
+                        y += 1;
                         break;
                     case "s":
-                        if (north != 0 && (east != 0 || west != 0))
-                        {
-                            north--;
-                        }
-                        else if (north != 0)
-                        {
-                            north--;
-                        }
-                        else
-                        {
-                            south++;
-                        }
+                        y -= 1;
+                        z += 1;
                         break;
                     case "se":
-                        if (north != 0 && west != 0)
-                        {
-                            north--;
-                            west--;
-                        }
-                        else if (south != 0 && west != 0)
-                        {
-                            west--;
-                        }
-                        else if (north != 0)
-                        {
-                            north--;
-                            east++;
-                        }
-                        else if (west != 0)
-                        {
-                            west--;
-                            south++;
-                        }
-                        else
-                        {
-                            south++;
-                            east++;
-                        }
+                        x += 1;
+                        y -= 1;
                         break;
                     case "sw":
-                        if (north != 0 && east != 0)
-                        {
-                            north--;
-                            east--;
-                        }
-                        else if (south != 0 && east != 0)
-                        {
-                            east--;
-                        }
-                        else if (north != 0)
-                        {
-                            north--;
-                            west++;
-                        }
-                        else if (east != 0)
-                        {
-                            east--;
-                            south++;
-                        }
-                        else
-                        {
-                            south++;
-                            west++;
-                        }
+                        x -= 1;
+                        z += 1;
                         break;
                     default:
                         Console.WriteLine("Something went wrong in switch statement");
                         break;
                 }
             }
-
-            return new List<int>() { north, south, east, west }.Max();
+            var distance = (Math.Abs(x) + Math.Abs(y) + Math.Abs(z)) / 2;
+            return distance;
         }
     }
 }
