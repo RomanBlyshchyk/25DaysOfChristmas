@@ -20,10 +20,10 @@ namespace Day11
 
         public static int FindShortestDistance(string input)
         {
-            var stepsNorth = 0;
-            var stepsSouth = 0;
-            var stepsEast = 0;
-            var stepsWest = 0;
+            var north = 0;
+            var south = 0;
+            var east = 0;
+            var west = 0;
 
             var steps = input.Split(',');
 
@@ -32,121 +32,137 @@ namespace Day11
                 switch (step)
                 {
                     case "n":
-                        if (stepsSouth != 0 && (stepsEast != 0 || stepsWest != 0))
+                        if (south != 0 && (east != 0 || west != 0))
                         {
-                            stepsSouth--;
+                            south--;
                         }
-                        else if (stepsSouth != 0)
+                        else if (south != 0)
                         {
-                            stepsSouth--;
+                            south--;
                         }
                         else
                         {
-                            stepsNorth++;
+                            north++;
                         }
                         break;
                     case "ne":
 
-                        if (stepsWest != 0 && stepsSouth != 0)
+                        if (south != 0 && west != 0)
                         {
-                            stepsWest--;
-                            stepsSouth--;
+                            south--;
+                            west--;
                         }
-                        else if (stepsWest != 0)
+                        else if (west != 0 && north != 0)
                         {
-                            stepsWest--;
-                            stepsNorth++;
+                            west--;
                         }
-                        else if (stepsSouth != 0)
+                        else if (west != 0)
                         {
-                            stepsSouth--;
-                            stepsEast++;
+                            north++;
+                            west--;
+                        }
+                        else if (south != 0)
+                        {
+                            south--;
+                            east++;
                         }
                         else
                         {
-                            stepsNorth++;
-                            stepsEast++;
+                            north++;
+                            east++;
                         }
 
                         break;
                     case "nw":
-                        if (stepsEast != 0 && stepsSouth != 0)
+                        if (south != 0 && east != 0)
                         {
-                            stepsEast--;
-                            stepsSouth--;
+                            south--;
+                            east--;
                         }
-                        else if (stepsEast != 0)
+                        else if (north != 0 && east != 0)
                         {
-                            stepsEast--;
-                            stepsNorth++;
+                            east--;
                         }
-                        else if (stepsSouth != 0)
+                        else if (east != 0)
                         {
-                            stepsSouth--;
-                            stepsWest++;
+                            north++;
+                            east--;
+                        }
+                        else if (south != 0)
+                        {
+                            south--;
+                            west++;
                         }
                         else
                         {
-                            stepsNorth++;
-                            stepsWest++;
+                            north++;
+                            west++;
                         }
                         break;
                     case "s":
-                        if (stepsNorth != 0 && (stepsEast != 0 || stepsWest != 0))
+                        if (north != 0 && (east != 0 || west != 0))
                         {
-                            stepsNorth--;
+                            north--;
                         }
-                        else if (stepsNorth != 0)
+                        else if (north != 0)
                         {
-                            stepsNorth--;
+                            north--;
                         }
                         else
                         {
-                            stepsSouth++;
+                            south++;
                         }
                         break;
                     case "se":
-                        if (stepsNorth != 0 && stepsWest != 0)
+                        if (north != 0 && west != 0)
                         {
-                            stepsNorth--;
-                            stepsWest--;
+                            north--;
+                            west--;
                         }
-                        else if (stepsNorth != 0)
+                        else if (south != 0 && west != 0)
                         {
-                            stepsNorth--;
-                            stepsEast++;
+                            west--;
                         }
-                        else if (stepsWest != 0)
+                        else if (north != 0)
                         {
-                            stepsWest--;
-                            stepsSouth++;
+                            north--;
+                            east++;
+                        }
+                        else if (west != 0)
+                        {
+                            west--;
+                            south++;
                         }
                         else
                         {
-                            stepsSouth++;
-                            stepsEast++;
+                            south++;
+                            east++;
                         }
                         break;
                     case "sw":
-                        if (stepsNorth != 0 && stepsEast != 0)
+                        if (north != 0 && east != 0)
                         {
-                            stepsNorth--;
-                            stepsEast--;
+                            north--;
+                            east--;
                         }
-                        else if (stepsNorth != 0)
+                        else if (south != 0 && east != 0)
                         {
-                            stepsNorth--;
-                            stepsWest++;
+                            east--;
                         }
-                        else if (stepsEast != 0)
+                        else if (north != 0)
                         {
-                            stepsEast--;
-                            stepsSouth++;
+                            north--;
+                            west++;
+                        }
+                        else if (east != 0)
+                        {
+                            east--;
+                            south++;
                         }
                         else
                         {
-                            stepsSouth++;
-                            stepsWest++;
+                            south++;
+                            west++;
                         }
                         break;
                     default:
@@ -154,8 +170,8 @@ namespace Day11
                         break;
                 }
             }
-            
-            return new List<int>() { stepsNorth, stepsSouth, stepsEast, stepsWest }.Max();
+
+            return new List<int>() { north, south, east, west }.Max();
         }
     }
 }

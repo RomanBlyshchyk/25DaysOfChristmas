@@ -26,6 +26,7 @@ namespace _25DaysOfChristmasTests
         [TestCase("n,n,se,se,s,s,sw,sw,nw,nw,n,n,ne,ne", 2)]
         [TestCase("n,n,se,se,s,s,sw,sw,nw,nw,n,n,ne,ne,s,s", 0)]
         [TestCase("s,ne,n,nw,sw,s,se,n",0)]
+        [TestCase("se,sw,se,sw,se,sw,se,sw",4)]
         [Test]
         public void FindShortestDistanceTest(string input, int result)
         {
