@@ -16,15 +16,37 @@ namespace Day12
             //@"c:\users\roman\source\repos\25daysofchristmas\day12\input.txt"
             using (var sr = new StreamReader("C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day12\\input.txt"))
             {
-                Console.WriteLine(FindGroupSize(sr.ReadToEnd()));
+                Console.WriteLine(FindGroupCount(sr.ReadToEnd()));
                 Console.ReadKey();
             }
         }
 
+        public static int FindGroupCount(string input)
+        {
+            var groupFull = ParseInput(input);
+            var groupCount = 0;
+            while (groupFull.Count != 0)
+            {
+                CountGroupSize(groupFull, groupFull[0].Name, "");
+                groupCount++;
+            }
+            return groupCount;
+        }
+
+
         public static int FindGroupSize(string input)
         {
+            var groupFull = ParseInput(input);
+
+            CountGroupSize(groupFull, groupFull.First().Name, "");
+
+            return _finalGroup.Count;
+        }
+
+        private static List<Person> ParseInput(string input)
+        {
             var lines = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            var group = new List<Person>();
+            var groupFull = new List<Person>();
             foreach (var line in lines)
             {
                 var lineParts = line.Trim().Split(' ');
@@ -37,12 +59,10 @@ namespace Day12
                     friends.Add(friendName);
                 }
 
-                group.Add(new Person(name, friends));
+                groupFull.Add(new Person(name, friends));
             }
 
-            CountGroupSize(group, group.First().Name, "");
-
-            return _finalGroup.Count;
+            return groupFull;
         }
 
         private static void CountGroupSize(List<Person> group, string startName, string parent)
@@ -51,6 +71,7 @@ namespace Day12
             if (!_finalGroup.Contains(startName))
             {
                 _finalGroup.Add(startName);
+                group.Remove(person);
                 // can we even have zero friends? 
                 if (person.Friends.Count == 1)
                 {
