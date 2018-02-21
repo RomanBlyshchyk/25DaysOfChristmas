@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1_InverseCaptcha", "Day1_InverseCaptcha\Day1_InverseCaptcha.csproj", "{ED48D248-9143-4439-B163-BE51B163F0BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day01", "Day1_InverseCaptcha\Day01.csproj", "{ED48D248-9143-4439-B163-BE51B163F0BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2_CorruptionChecksum", "Day2_CorruptionChecksum\Day2_CorruptionChecksum.csproj", "{C87947DB-D915-4728-8491-51DB9254D004}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day02", "Day2_CorruptionChecksum\Day02.csproj", "{C87947DB-D915-4728-8491-51DB9254D004}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25DaysOfChristmasTests", "25DaysOfChristmasTests\25DaysOfChristmasTests.csproj", "{09019FAC-3B7B-48E9-BEA9-D37824CBBB0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3_SpiralMemory", "Day3_SpiralMemory\Day3_SpiralMemory.csproj", "{AEFBA267-2356-4191-8EAB-A025B277844D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day03", "Day3_SpiralMemory\Day03.csproj", "{AEFBA267-2356-4191-8EAB-A025B277844D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8_Registers", "Day8_Registers\Day8_Registers.csproj", "{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day08", "Day8_Registers\Day08.csproj", "{0D429F11-9D44-45E2-BE92-18ECC0D6CDAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4_Passphrases", "Day4_Passphrases\Day4_Passphrases.csproj", "{6BDF4394-6782-4CF5-866F-0CBF68427D98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day04", "Day4_Passphrases\Day04.csproj", "{6BDF4394-6782-4CF5-866F-0CBF68427D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day5_Trampolines", "Day5_Trampolines\Day5_Trampolines.csproj", "{F545AFB0-1A93-4EB2-9159-99E3F9DBA923}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day05", "Day5_Trampolines\Day05.csproj", "{F545AFB0-1A93-4EB2-9159-99E3F9DBA923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6_Memory", "Day6_Memory\Day6_Memory.csproj", "{9CB4229B-2601-4CB9-8A1B-FDC9B3802936}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day06", "Day6_Memory\Day06.csproj", "{9CB4229B-2601-4CB9-8A1B-FDC9B3802936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7_Circus", "Day7_Circus\Day7_Circus.csproj", "{4EF13BA1-2F9C-41E3-B28C-3893CC1EEB47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day07", "Day7_Circus\Day07.csproj", "{4EF13BA1-2F9C-41E3-B28C-3893CC1EEB47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day9", "Day9\Day9.csproj", "{040C3CC1-4EBE-46F2-9063-5E631123AFEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day09", "Day9\Day09.csproj", "{040C3CC1-4EBE-46F2-9063-5E631123AFEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10", "Dady10\Day10.csproj", "{FD397C63-64E8-47FF-9829-9E62AE6486C1}"
 EndProject

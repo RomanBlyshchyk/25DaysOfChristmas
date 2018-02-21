@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Day2_CorruptionChecksum
 {
-    public class Day2
+    public class Day02
     {
         static void Main(string[] args)
         {

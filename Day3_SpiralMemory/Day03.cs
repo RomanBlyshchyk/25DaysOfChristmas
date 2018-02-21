@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day3_SpiralMemory
 {
-    public class Day3
+    public class Day03
     {
         static void Main(string[] args)
         {

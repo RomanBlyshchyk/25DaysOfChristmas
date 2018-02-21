@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    class Day4Tests
+    class Day04Tests
     {
 
         [TestCase("",0)]
@@ -20,7 +20,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void CountValidPassphrasesTest(string input, int result)
         {
-            var feedback = Day4.CountValidPassphrases(input);
+            var feedback = Day04.CountValidPassphrases(input);
             Assert.AreEqual(result, feedback);
         }
 
@@ -34,7 +34,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void CountValidPassphrasesHardTest(string input, int result)
         {
-            var feedback = Day4.CountValidPassphrasesHard(input);
+            var feedback = Day04.CountValidPassphrasesHard(input);
             Assert.AreEqual(result, feedback);
         }
     }

@@ -9,7 +9,7 @@ using Day9;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    class Day9Tests
+    class Day09Tests
     {
         /*
             {}, score of 1.
@@ -36,7 +36,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void FindTotalGroupScoreTest(string input, int result)
         {
-            var totalScore = Day9.Day9.FindTotalGroupScore(input);
+            var totalScore = Day9.Day09.FindTotalGroupScore(input);
             Assert.AreEqual(result, totalScore);
         }
 
@@ -60,7 +60,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void CountCancelledCharactersTest(string input, int result)
         {
-            var totalCount = Day9.Day9.CountCancelledCharacters(input);
+            var totalCount = Day9.Day09.CountCancelledCharacters(input);
             Assert.AreEqual(result, totalCount);
         }
     }

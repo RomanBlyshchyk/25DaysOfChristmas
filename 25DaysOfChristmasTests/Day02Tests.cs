@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    public class Day2Tests
+    public class Day02Tests
     {
 
         [TestCase("", 0)]
@@ -15,7 +15,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
-            var x = Day2.CorruptionChecksum(input);
+            var x = Day02.CorruptionChecksum(input);
             Assert.AreEqual(result, x);
         }
 
@@ -24,7 +24,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void EvenDivideValuesTest(string input, int result)
         {
-            var x = Day2.EvenDivideValues(input);
+            var x = Day02.EvenDivideValues(input);
             Assert.AreEqual(result, x);
         }
     }

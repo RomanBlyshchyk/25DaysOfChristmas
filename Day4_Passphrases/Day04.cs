@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Day4_Passphrases
 {
-    public class Day4
+    public class Day04
     {
         static void Main(string[] args)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day1_InverseCaptcha
 {
-    public class Day1
+    public class Day01
     {
         static void Main(string[] args)
         {

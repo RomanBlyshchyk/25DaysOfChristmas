@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Day5_Trampolines
 {
-    public class Day5
+    public class Day05
     {
         static void Main(string[] args)
         {

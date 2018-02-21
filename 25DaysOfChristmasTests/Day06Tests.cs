@@ -9,14 +9,14 @@ using Day6_Memory;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    class Day6Tests
+    class Day06Tests
     {
         [TestCase(new int[] { 0, 2, 7, 0 }, 5)]
         [TestCase(new int[] { 11, 11, 13, 7, 0, 15, 5, 5, 4, 4, 1, 1, 7, 1, 15, 11 }, 5)]
         [Test]
         public void CountCyclesTest(int[] input, int result)
         {
-            var count = Day6.CountCycles(input);
+            var count = Day06.CountCycles(input);
             Assert.AreEqual(result, count);
         }
 
@@ -28,7 +28,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void PerformRedistributionTest(int[] input, int[] result)
         {
-            var output = Day6.PerformRedistribution(input);
+            var output = Day06.PerformRedistribution(input);
             Assert.AreEqual(output, result);
         }
     }

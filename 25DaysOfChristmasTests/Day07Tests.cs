@@ -9,14 +9,14 @@ using Day7_Circus;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    class Day7Tests
+    class Day07Tests
     {
 
         [TestCase("","")]
         [Test]
         public void FindRootTest(string input, string result)
         {
-            var root = Day7.FindRoot(input);
+            var root = Day07.FindRoot(input);
             Assert.AreEqual(result, root);
         }
     }

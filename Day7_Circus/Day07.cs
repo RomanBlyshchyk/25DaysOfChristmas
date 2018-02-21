@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Day7_Circus
 {
-    public class Day7
+    public class Day07
     {
         static void Main(string[] args)
         {

@@ -9,7 +9,7 @@ using Day5_Trampolines;
 namespace _25DaysOfChristmasTests
 {
     [TestFixture]
-    class Day5Tests
+    class Day05Tests
     {
 
         [TestCase(new int[] { 0, 3, 0, 1, -3 }, 5)]
@@ -19,7 +19,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void CountStepsToExitTest(int[] input, int result)
         {
-            var stepCount = Day5.CountStepsToExit(input);
+            var stepCount = Day05.CountStepsToExit(input);
             Assert.AreEqual(stepCount, result);
         }
 
@@ -27,7 +27,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void CountStepsToExitStrangeTest(int[] input, int result)
         {
-            var stepCount = Day5.CountStepsToExitStrange(input);
+            var stepCount = Day05.CountStepsToExitStrange(input);
             Assert.AreEqual(stepCount, result);
         }
     }

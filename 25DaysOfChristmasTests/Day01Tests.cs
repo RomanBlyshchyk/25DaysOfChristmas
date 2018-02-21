@@ -7,7 +7,7 @@ namespace InverseCaptcha_Test
     /// Summary description for UnitTest1
     /// </summary>
     [TestFixture]
-    public class Day1Tests
+    public class Day01Tests
     {
 
         [TestCase("1122", 3)]
@@ -19,7 +19,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
-            var x = Day1.InverseCapcha(input);
+            var x = Day01.InverseCapcha(input);
             Assert.AreEqual(result, x);
         }
 
@@ -31,7 +31,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaRoundTest(string input, int result)
         {
-            var x = Day1.InverseCapchaRound(input);
+            var x = Day01.InverseCapchaRound(input);
             Assert.AreEqual(result, x);
         }
     }

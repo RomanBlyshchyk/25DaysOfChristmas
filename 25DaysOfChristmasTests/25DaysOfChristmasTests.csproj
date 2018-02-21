@@ -55,16 +55,16 @@
   <ItemGroup>
     <Compile Include="Day12Tests.cs" />
     <Compile Include="Day11Tests.cs" />
-    <Compile Include="Day1Tests.cs" />
-    <Compile Include="Day2Tests.cs" />
-    <Compile Include="Day3Tests.cs" />
-    <Compile Include="Day4Tests.cs" />
-    <Compile Include="Day5Tests.cs" />
-    <Compile Include="Day6Tests.cs" />
-    <Compile Include="Day7Tests.cs" />
+    <Compile Include="Day01Tests.cs" />
+    <Compile Include="Day02Tests.cs" />
+    <Compile Include="Day03Tests.cs" />
+    <Compile Include="Day04Tests.cs" />
+    <Compile Include="Day05Tests.cs" />
+    <Compile Include="Day06Tests.cs" />
+    <Compile Include="Day07Tests.cs" />
     <Compile Include="Day10Tests.cs" />
-    <Compile Include="Day9Tests.cs" />
-    <Compile Include="Day8Tests.cs" />
+    <Compile Include="Day09Tests.cs" />
+    <Compile Include="Day08Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,41 +80,41 @@
       <Project>{7af97384-d9ef-4499-9663-84deef3b93dc}</Project>
       <Name>Day12</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day1_InverseCaptcha\Day1_InverseCaptcha.csproj">
+    <ProjectReference Include="..\Day1_InverseCaptcha\Day01.csproj">
       <Project>{ed48d248-9143-4439-b163-be51b163f0bb}</Project>
-      <Name>Day1_InverseCaptcha</Name>
+      <Name>Day01</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day2_CorruptionChecksum\Day2_CorruptionChecksum.csproj">
+    <ProjectReference Include="..\Day2_CorruptionChecksum\Day02.csproj">
       <Project>{c87947db-d915-4728-8491-51db9254d004}</Project>
-      <Name>Day2_CorruptionChecksum</Name>
+      <Name>Day02</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day3_SpiralMemory\Day3_SpiralMemory.csproj">
+    <ProjectReference Include="..\Day3_SpiralMemory\Day03.csproj">
       <Project>{aefba267-2356-4191-8eab-a025b277844d}</Project>
-      <Name>Day3_SpiralMemory</Name>
+      <Name>Day03</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day4_Passphrases\Day4_Passphrases.csproj">
+    <ProjectReference Include="..\Day4_Passphrases\Day04.csproj">
       <Project>{6bdf4394-6782-4cf5-866f-0cbf68427d98}</Project>
-      <Name>Day4_Passphrases</Name>
+      <Name>Day04</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day5_Trampolines\Day5_Trampolines.csproj">
+    <ProjectReference Include="..\Day5_Trampolines\Day05.csproj">
       <Project>{f545afb0-1a93-4eb2-9159-99e3f9dba923}</Project>
-      <Name>Day5_Trampolines</Name>
+      <Name>Day05</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day6_Memory\Day6_Memory.csproj">
+    <ProjectReference Include="..\Day6_Memory\Day06.csproj">
       <Project>{9cb4229b-2601-4cb9-8a1b-fdc9b3802936}</Project>
-      <Name>Day6_Memory</Name>
+      <Name>Day06</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day7_Circus\Day7_Circus.csproj">
+    <ProjectReference Include="..\Day7_Circus\Day07.csproj">
       <Project>{4ef13ba1-2f9c-41e3-b28c-3893cc1eeb47}</Project>
-      <Name>Day7_Circus</Name>
+      <Name>Day07</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day8_Registers\Day8_Registers.csproj">
+    <ProjectReference Include="..\Day8_Registers\Day08.csproj">
       <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
-      <Name>Day8_Registers</Name>
+      <Name>Day08</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day9\Day9.csproj">
+    <ProjectReference Include="..\Day9\Day09.csproj">
       <Project>{040c3cc1-4ebe-46f2-9063-5e631123afeb}</Project>
-      <Name>Day9</Name>
+      <Name>Day09</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
