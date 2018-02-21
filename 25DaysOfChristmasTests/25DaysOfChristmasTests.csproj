@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -53,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Day13Tests .cs" />
     <Compile Include="Day12Tests.cs" />
     <Compile Include="Day11Tests.cs" />
     <Compile Include="Day01Tests.cs" />
@@ -79,6 +83,10 @@
     <ProjectReference Include="..\Day12\Day12.csproj">
       <Project>{7af97384-d9ef-4499-9663-84deef3b93dc}</Project>
       <Name>Day12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day13\Day13.csproj">
+      <Project>{ab10a8ef-d1b1-4c3b-91c0-188d5d0062f2}</Project>
+      <Name>Day13</Name>
     </ProjectReference>
     <ProjectReference Include="..\Day1_InverseCaptcha\Day01.csproj">
       <Project>{ed48d248-9143-4439-b163-be51b163f0bb}</Project>
