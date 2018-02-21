@@ -15,8 +15,9 @@ namespace _25DaysOfChristmasTests
 
 
         [TestCase(input, 24)]
+        [TestCase("", 0)]
         [Test]
-        public void FindGroupSizeTest(string input, int result)
+        public void FindSeverityTest(string input, int result)
         {
             var totalScore = Day13.Day13.FindSeverity(input);  //
             Assert.AreEqual(result, totalScore);
