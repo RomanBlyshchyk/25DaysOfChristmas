@@ -15,19 +15,75 @@ namespace Day13
             //@"c:\users\roman\source\repos\25daysofchristmas\day13\input.txt"
             using (var sr = new StreamReader("C:\\Development\\VS2015\\Projects\\25DaysOfChristmas\\Day13\\input.txt"))
             {
-                Console.WriteLine(FindSeverity(sr.ReadToEnd()));
+                Console.WriteLine(FindDelayTime(sr.ReadToEnd()));
                 Console.ReadKey();
             }
         }
+
+        public static int FindDelayTime(string input)
+        {
+            var delay = 0;
+            var firewall = ParseInput(input);
+            var tempFirewall = Clone(firewall);
+
+            var isCaught = IsCaught(tempFirewall);
+            while (isCaught)
+            {
+                delay++;
+
+                foreach (var securityLevel in firewall)
+                    securityLevel.TimeStamp();
+
+                tempFirewall = Clone(firewall);
+                isCaught = IsCaught(tempFirewall);
+            }
+            return delay;
+        }
+
+
+        public static List<SecurityLevel> Clone(List<SecurityLevel> firewall)
+        {
+            var copy = new List<SecurityLevel>();
+            var query = from SecurityLevel item in firewall select item.DeepClone();
+            return new List<SecurityLevel>(query);
+        }
+
+        /// <summary>
+        /// mostly a copy of FindSeverity. 
+        /// </summary>
+        /// <param name="firewall"></param>
+        /// <returns></returns>
+        public static bool IsCaught(List<SecurityLevel> firewall)
+        {
+            var isCaught = false;
+            var packetPosition = 0;
+            while (packetPosition < firewall.Count)
+            {
+                if (firewall[packetPosition].Position == 0 && firewall[packetPosition].Range != 0)
+                {
+                    // We are caught.
+                    isCaught = true;
+                    break;
+                }
+
+                foreach (var securityLevel in firewall)
+                    securityLevel.TimeStamp();
+
+                packetPosition++;
+            }
+
+            return isCaught;
+        }
+
 
         public static int FindSeverity(string input)
         {
             var severity = 0;
             var firewall = ParseInput(input);
             var packetPosition = 0;
-            while(packetPosition < firewall.Count)
+            while (packetPosition < firewall.Count)
             {
-                if(firewall[packetPosition].Position == 0)
+                if (firewall[packetPosition].Position == 0)
                 {
                     // We are caught. Add to severity
                     severity += firewall[packetPosition].Depth * firewall[packetPosition].Range;
@@ -129,12 +185,22 @@ namespace Day13
                 _scannerDirection = Direction.Down;
             }
 
+            public void ResetPosition()
+            {
+                Position = 0;
+                _scannerDirection = Direction.Down;
+            }
+
             /// <summary>
             /// Would be good to test this
             /// </summary>
             public void TimeStamp()
             {
-                if (_scannerDirection == Direction.Down)
+                if (Range == 0)
+                {
+                    // do nothing
+                }
+                else if (_scannerDirection == Direction.Down)
                 {
                     if (Position == Range - 1)
                     {
@@ -158,6 +224,14 @@ namespace Day13
                         Position--;
                     }
                 }
+            }
+
+            internal SecurityLevel DeepClone()
+            {
+                var clone = new SecurityLevel(Depth, Range);
+                clone.Position = Position;
+                clone._scannerDirection = _scannerDirection;
+                return clone;
             }
         }
     }

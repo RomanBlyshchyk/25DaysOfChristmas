@@ -23,5 +23,14 @@ namespace _25DaysOfChristmasTests
             Assert.AreEqual(result, totalScore);
         }
 
+        [TestCase(input, 10)]
+        [TestCase("", 0)]
+        [Test]
+        public void FindDelayTimeTest(string input, int result)
+        {
+            var totalScore = Day13.Day13.FindDelayTime(input);  //
+            Assert.AreEqual(result, totalScore);
+        }
+
     }
 }
