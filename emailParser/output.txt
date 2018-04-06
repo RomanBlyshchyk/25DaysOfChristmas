@@ -1,0 +1,2 @@
+bob.smith@foocompany.com
+jane.doe@foocompany.com

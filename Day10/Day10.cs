@@ -49,11 +49,12 @@ namespace Day10
             for (int i = 0; i < 64; i++)
                 KnotHashRound(input, list);
 
-            // calculate dense hash --> 16 numbers 
+            // calculate dense hash --> hashDensity numbers 
+            var hashDensity = 16;
             var denseHash = new List<int>();
-            for (int i = 0; i < _hashSize; i += 16)
+            for (int i = 0; i < _hashSize; i += hashDensity)
             {
-                var subset = list.GetRange(i, 16);
+                var subset = list.GetRange(i, hashDensity);
                 var denseValue = 0;
                 foreach (var item in subset)
                 {
