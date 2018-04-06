@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day2_CorruptionChecksum
+namespace Day02
 {
     public class Day02
     {

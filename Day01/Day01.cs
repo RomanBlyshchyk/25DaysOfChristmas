@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day1_InverseCaptcha
+namespace Day01
 {
     public class Day01
     {

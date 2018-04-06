@@ -1,7 +1,6 @@
-﻿using Day1_InverseCaptcha;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace InverseCaptcha_Test
+namespace Day01_Test
 {
     /// <summary>
     /// Summary description for UnitTest1
@@ -19,7 +18,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
-            var x = Day01.InverseCapcha(input);
+            var x = Day01.Day01.InverseCapcha(input);
             Assert.AreEqual(result, x);
         }
 
@@ -31,7 +30,7 @@ namespace InverseCaptcha_Test
         [Test]
         public void InverseCapchaRoundTest(string input, int result)
         {
-            var x = Day01.InverseCapchaRound(input);
+            var x = Day01.Day01.InverseCapchaRound(input);
             Assert.AreEqual(result, x);
         }
     }

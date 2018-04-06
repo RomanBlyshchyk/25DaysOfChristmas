@@ -56,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Day14Tests.cs" />
     <Compile Include="Day13Tests .cs" />
     <Compile Include="Day12Tests.cs" />
     <Compile Include="Day11Tests.cs" />
@@ -72,7 +73,46 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dady10\Day10.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day01\Day01.csproj">
+      <Project>{ed48d248-9143-4439-b163-be51b163f0bb}</Project>
+      <Name>Day01</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day02\Day02.csproj">
+      <Project>{c87947db-d915-4728-8491-51db9254d004}</Project>
+      <Name>Day02</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day03\Day03.csproj">
+      <Project>{aefba267-2356-4191-8eab-a025b277844d}</Project>
+      <Name>Day03</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day04\Day04.csproj">
+      <Project>{6bdf4394-6782-4cf5-866f-0cbf68427d98}</Project>
+      <Name>Day04</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day05\Day05.csproj">
+      <Project>{f545afb0-1a93-4eb2-9159-99e3f9dba923}</Project>
+      <Name>Day05</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day06\Day06.csproj">
+      <Project>{9cb4229b-2601-4cb9-8a1b-fdc9b3802936}</Project>
+      <Name>Day06</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day07\Day07.csproj">
+      <Project>{4ef13ba1-2f9c-41e3-b28c-3893cc1eeb47}</Project>
+      <Name>Day07</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day08\Day08.csproj">
+      <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
+      <Name>Day08</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day09\Day09.csproj">
+      <Project>{040c3cc1-4ebe-46f2-9063-5e631123afeb}</Project>
+      <Name>Day09</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day10\Day10.csproj">
       <Project>{fd397c63-64e8-47ff-9829-9e62ae6486c1}</Project>
       <Name>Day10</Name>
     </ProjectReference>
@@ -88,45 +128,10 @@
       <Project>{ab10a8ef-d1b1-4c3b-91c0-188d5d0062f2}</Project>
       <Name>Day13</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day1_InverseCaptcha\Day01.csproj">
-      <Project>{ed48d248-9143-4439-b163-be51b163f0bb}</Project>
-      <Name>Day01</Name>
+    <ProjectReference Include="..\Day14\Day14.csproj">
+      <Project>{7d7a80e1-2e11-41ec-8858-52badc9b6a70}</Project>
+      <Name>Day14</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Day2_CorruptionChecksum\Day02.csproj">
-      <Project>{c87947db-d915-4728-8491-51db9254d004}</Project>
-      <Name>Day02</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day3_SpiralMemory\Day03.csproj">
-      <Project>{aefba267-2356-4191-8eab-a025b277844d}</Project>
-      <Name>Day03</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day4_Passphrases\Day04.csproj">
-      <Project>{6bdf4394-6782-4cf5-866f-0cbf68427d98}</Project>
-      <Name>Day04</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day5_Trampolines\Day05.csproj">
-      <Project>{f545afb0-1a93-4eb2-9159-99e3f9dba923}</Project>
-      <Name>Day05</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day6_Memory\Day06.csproj">
-      <Project>{9cb4229b-2601-4cb9-8a1b-fdc9b3802936}</Project>
-      <Name>Day06</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day7_Circus\Day07.csproj">
-      <Project>{4ef13ba1-2f9c-41e3-b28c-3893cc1eeb47}</Project>
-      <Name>Day07</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day8_Registers\Day08.csproj">
-      <Project>{0d429f11-9d44-45e2-be92-18ecc0d6cdad}</Project>
-      <Name>Day08</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Day9\Day09.csproj">
-      <Project>{040c3cc1-4ebe-46f2-9063-5e631123afeb}</Project>
-      <Name>Day09</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

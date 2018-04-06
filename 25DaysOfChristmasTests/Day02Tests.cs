@@ -1,5 +1,5 @@
-﻿using Day1_InverseCaptcha;
-using Day2_CorruptionChecksum;
+﻿using Day01;
+using Day02;
 using NUnit.Framework;
 
 
@@ -15,7 +15,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void InverseCapchaTest(string input, int result)
         {
-            var x = Day02.CorruptionChecksum(input);
+            var x = Day02.Day02.CorruptionChecksum(input);
             Assert.AreEqual(result, x);
         }
 
@@ -24,7 +24,7 @@ namespace _25DaysOfChristmasTests
         [Test]
         public void EvenDivideValuesTest(string input, int result)
         {
-            var x = Day02.EvenDivideValues(input);
+            var x = Day02.Day02.EvenDivideValues(input);
             Assert.AreEqual(result, x);
         }
     }
