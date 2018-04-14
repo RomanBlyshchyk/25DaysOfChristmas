@@ -13,7 +13,7 @@ namespace Day16
         //public static char[] _danceFloor = new char[] { 'a', 'b', 'c', 'd', 'e' };
 
 
-        //aklbdihfncopemgj ==> WRONG
+        //aklbdihfncopemgj ==> WRONG 
         static void Main(string[] args)
         {
             using (var sr = new StreamReader(@"C:\Development\VS2015\Projects\25DaysOfChristmas\Day16\input.txt"))

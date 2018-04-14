@@ -13,7 +13,6 @@ namespace _25DaysOfChristmasTests
         [TestCase("s1", "eabcd")]
         [TestCase("s4", "bcdea")]
         [TestCase("s0", "abcde")]
-
         [TestCase("x2/4", "abedc")]
         [TestCase("pb/e", "aecdb")]
         [TestCase("s1,x3/4,pe/b", "baedc")]
