@@ -10,6 +10,30 @@ namespace Day17
     {
         public static void Main(string[] args)
         {
+            Part2();
+        }
+
+        private static void Part2()
+        {
+            var list = new CircularLinkedList<int>(0);
+
+            for (int i = 0; i < 50000000; i++)
+            {
+                for (int j = 0; j < 349; j++)
+                {
+                    list.Next();
+                }
+
+                list.AddAfter(list.currentPosition, i + 1);
+                list.Next();
+            }
+
+            Console.WriteLine(list.First.Next.Value);
+            Console.ReadKey();
+        }
+
+        private static void Part1()
+        {
             var list = new CircularLinkedList<int>(0);
 
             for (int i = 0; i < 2017; i++)
