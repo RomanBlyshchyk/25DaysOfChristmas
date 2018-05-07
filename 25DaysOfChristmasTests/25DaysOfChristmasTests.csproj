@@ -56,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Day18Tests.cs" />
     <Compile Include="Day17Tests.cs" />
     <Compile Include="Day16Tests.cs" />
     <Compile Include="Day14Tests.cs" />
@@ -145,6 +146,10 @@
     <ProjectReference Include="..\Day17\Day17.csproj">
       <Project>{159fb7ac-fab4-47df-9a02-6906d0b9eafd}</Project>
       <Name>Day17</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day18\Day18.csproj">
+      <Project>{22a9f30b-ead8-43b2-9eae-cd78a125e928}</Project>
+      <Name>Day18</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
