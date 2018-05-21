@@ -1,7 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using Day16;
 
 namespace _25DaysOfChristmasTests
 {
@@ -9,21 +6,24 @@ namespace _25DaysOfChristmasTests
     class Day18Tests
     {
         // abcde
+        const string _input = @"set a 1
+                            add a 2
+                            mul a a
+                            mod a 5
+                            snd a
+                            set a 0
+                            rcv a
+                            jgz a -1
+                            set a 1
+                            jgz a -2";
 
-        [TestCase("s1", "eabcd")]
-        [TestCase("s4", "bcdea")]
-        [TestCase("s0", "abcde")]
-        [TestCase("x2/4", "abedc")]
-        [TestCase("pb/e", "aecdb")]
-        [TestCase("s1,x3/4,pe/b", "baedc")]
-        [TestCase("s3","cdeab")]
-        [TestCase("s3,pc/e","edcab")]
-        [TestCase("s3,pc/e,x0/4","bdcae")]
+
+        [TestCase(_input, 4)]
         [Test]
-        public void Test(string input, string result)
+        public void Test(string input, long result)
         {
-            var state = Day16.Day16.LetsDance(input);
-            Assert.AreEqual(result, state);
+            var finalFrequency = Day18.Day18.FindFinalFrequency(input);
+            Assert.AreEqual(result, finalFrequency);
         }
 
 

@@ -11,7 +11,7 @@ namespace Day18
     {
         static void Main(string[] args)
         {
-            using (var sr = new StreamReader(@"C:\Development\VS2015\Projects\25DaysOfChristmas\Day18\input.txt"))
+            using (var sr = new StreamReader(@"input.txt"))
             {
                 var input = sr.ReadToEnd();
                 var finalFrequency = FindFinalFrequency(input);
@@ -22,21 +22,21 @@ namespace Day18
         }
 
         //Assume there is no bad data. Hence no significant error checking for the input
-        private static int FindFinalFrequency(string input)
+        public static long FindFinalFrequency(string input)
         {
-            var finalFrequency = 0;
+            long finalFrequency = 0;
             var commands = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             var isRecoveryReached = false;
             var currentCommandIndex = 0;
-            var lastPlayedSound = 0;
-            var registry = new Dictionary<string, int>();
+            long lastPlayedSound = 0;
+            var registry = new Dictionary<string, long>();
 
             while (!isRecoveryReached)
             {
-                var currentCommand = commands[currentCommandIndex];
+                var currentCommand = commands[currentCommandIndex].Trim();
                 //process current command
-                var operation = currentCommand.Substring(0, 3);
                 var commandParts = currentCommand.Split(' ');
+                var operation = commandParts[0];
 
                 switch (operation)
                 {
@@ -46,15 +46,16 @@ namespace Day18
                         break;
                     case "set":
                         var registerName = commandParts[1];
-                        var registerValue = 0;
+                        long registerValue = 0;
                         try
                         {
                             registerValue = Convert.ToInt32(commandParts[2]);
                         }
-                        catch 
+                        catch
                         {
                             registerValue = registry[commandParts[2]];
                         }
+
                         if (registry.ContainsKey(registerName))
                         {
                             registry[registerName] = registerValue;
@@ -65,7 +66,7 @@ namespace Day18
                         }
                         break;
                     case "add":
-                        var value = 0;
+                        long value = 0;
                         try
                         {
                             value = Convert.ToInt32(commandParts[2]);
@@ -135,7 +136,8 @@ namespace Day18
                         }
                         break;
                 }
-                if(operation != "jgz")
+
+                if (operation != "jgz")
                     currentCommandIndex++;
             }
 
