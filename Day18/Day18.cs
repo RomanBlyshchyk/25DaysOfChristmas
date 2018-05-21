@@ -132,7 +132,7 @@ namespace Day18
                         }
                         else
                         {
-                            operation = "noj";  // no jump; advance the index
+                            operation = "noj";  // no jump; advance the index  
                         }
                         break;
                 }
