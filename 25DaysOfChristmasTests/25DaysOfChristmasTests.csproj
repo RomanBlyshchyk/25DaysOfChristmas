@@ -57,6 +57,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Day18Tests.cs" />
+    <Compile Include="Day17Tests.cs" />
+    <Compile Include="Day16Tests.cs" />
     <Compile Include="Day14Tests.cs" />
     <Compile Include="Day13Tests .cs" />
     <Compile Include="Day12Tests.cs" />
@@ -133,6 +136,25 @@
       <Project>{7d7a80e1-2e11-41ec-8858-52badc9b6a70}</Project>
       <Name>Day14</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Day15\Day15.csproj">
+      <Project>{cb75a092-e646-409a-a61e-c2ed295547f5}</Project>
+      <Name>Day15</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day16\Day16.csproj">
+      <Project>{eb1f140f-32df-4fd9-bffd-4011d5552633}</Project>
+      <Name>Day16</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day17\Day17.csproj">
+      <Project>{159fb7ac-fab4-47df-9a02-6906d0b9eafd}</Project>
+      <Name>Day17</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day18\Day18.csproj">
+      <Project>{22a9f30b-ead8-43b2-9eae-cd78a125e928}</Project>
+      <Name>Day18</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
